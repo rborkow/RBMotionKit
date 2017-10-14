@@ -71,7 +71,7 @@ import CoreMotion
                 if values != nil{
                     values!(valX,valY,valZ)
                 }
-                let absoluteVal = sqrt(valX * valX + valY * valY + valZ * valZ)
+                let absoluteVal = sqrt(valX * valX as Double + valY * valY + valZ * valZ)
                 self.delegate?.retrieveAccelerometerValues!(valX, y: valY, z: valZ, absoluteValue: absoluteVal)
             })
         } else {
@@ -108,7 +108,7 @@ import CoreMotion
                 if values != nil{
                     values!(valX, valY, valZ)
                 }
-                let absoluteVal = sqrt(valX * valX + valY * valY + valZ * valZ)
+                let absoluteVal = sqrt(valX * valX as Double + valY * valY + valZ * valZ)
                 self.delegate?.retrieveGyroscopeValues!(valX, y: valY, z: valZ, absoluteValue: absoluteVal)
             })
             
@@ -145,7 +145,7 @@ import CoreMotion
                 if values != nil{
                     values!(valX, valY, valZ)
                 }
-                let absoluteVal = sqrt(valX * valX + valY * valY + valZ * valZ)
+                let absoluteVal = sqrt(valX * valX as Double + valY * valY + valZ * valZ)
                 self.delegate?.retrieveMagnetometerValues!(valX, y: valY, z: valZ, absoluteValue: absoluteVal)
             }
             
@@ -246,7 +246,7 @@ import CoreMotion
                     values!(valX, valY, valZ)
                 }
                 
-                let absoluteVal = sqrt(valX * valX + valY * valY + valZ * valZ)
+                let absoluteVal = sqrt(valX * valX as Double + valY * valY + valZ * valZ)
                 self.delegate?.getGravityAccelerationValFromDeviceMotion!(valX, y: valY, z: valZ)
             }
             
@@ -309,7 +309,7 @@ import CoreMotion
                     values!(valX, valY, valZ)
                 }
                 
-                let absoluteVal = sqrt(valX * valX + valY * valY + valZ * valZ)
+                let absoluteVal = sqrt(valX * valX as Double + valY * valY + valZ * valZ)
                 self.delegate?.getRotationRateFromDeviceMotion!(valX, y: valY, z: valZ)
             }
             
